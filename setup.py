@@ -2,11 +2,11 @@ from setuptools import setup
 from setuptools import find_namespace_packages
 
 setup(
-    name='asreview-template-model-extension',
+    name='asreview-Longformer',
     version='0.1',
-    description='Example classifier extension',
+    description='Longformer feature extractor for ASReview',
     url='https://github.com/asreview/asreview',
-    author='ASReview team',
+    author='Gijs Mourits',
     author_email='asreview@uu.nl',
     classifiers=[
         'Development Status :: 4 - Beta',
@@ -20,20 +20,21 @@ setup(
     python_requires='~=3.6',
     install_requires=[
         'sklearn',
-        'asreview>=0.13'
+        'asreview>=0.13',
+        'transformers',
+        'torch',
+        'numpy'
     ],
     entry_points={
         'asreview.models.classifiers': [
             'nb_example = asreviewcontrib.models.nb_default_param:NaiveBayesDefaultParamsModel',
         ],
         'asreview.models.feature_extraction': [
-            # define feature_extraction algorithms
+            'longformer = asreview.models.feature_extraction:Longformer',
         ],
         'asreview.models.balance': [
-            # define balance strategy algorithms
         ],
         'asreview.models.query': [
-            # define query strategy algorithms
         ]
     },
     project_urls={

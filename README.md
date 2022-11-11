@@ -30,7 +30,7 @@ and replace `{USER_NAME}` and `{REPO_NAME}` by your own details.
 ## Usage
 
 The new classifier `nb_example` is defined in
-[`asreviewcontrib/models/nb_default_param.py`](asreviewcontrib/models/nb_default_param.py) 
+[`asreviewcontrib/models/nb_default_param.py`](asreviewcontrib/models/longformer.py) 
 and can be used in a simulation.
 
 ```bash
